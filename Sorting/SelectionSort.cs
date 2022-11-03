@@ -1,42 +1,55 @@
-public class SelectionSort
+namespace Sorting
 {
-    private List<int> numbersToSort;
-
-    public SelectionSort(List<int> numbersToSort)
-    {
-        this.numbersToSort = numbersToSort;
-    }
-
     /// <summary>
-    /// Sorts the input numbers
+    /// The SelectionSort class
     /// </summary>
-    public List<int> Sort()
+    public class SelectionSort
     {
-        for (int index = 0; index < numbersToSort.Count; index++)
+        /// <summary>
+        /// The list of integers to sort
+        /// </summary>
+        private List<int> numbersToSort;
+
+        /// <summary>
+        /// Constructor for SelectionSort
+        /// </summary>
+        /// <param name="numbersToSort"></param>
+        public SelectionSort(List<int> numbersToSort)
         {
-            var minNumberIndex = index;
-            for (int innerIndex = index + 1; innerIndex < numbersToSort.Count; innerIndex++)
-            {
-                if (numbersToSort[innerIndex] < numbersToSort[minNumberIndex])
-                    minNumberIndex = innerIndex;
-            }
-            Swap(numbersToSort, index, minNumberIndex);
+            this.numbersToSort = numbersToSort;
         }
-        return numbersToSort;
-    }
 
-    /// <summary>
-    /// Swaps the numbers in the array among the indices provided
-    /// </summary>
-    /// <param name="arrInput"></param>
-    /// <param name="index"></param>
-    /// <param name="minNumberIndex"></param>
-    static void Swap(List<int> numbersToSort, int index, int minNumberIndex)
-    {
-        if (index == minNumberIndex)
-            return;
-        numbersToSort[index] = numbersToSort[index] + numbersToSort[minNumberIndex];
-        numbersToSort[minNumberIndex] = numbersToSort[index] - numbersToSort[minNumberIndex];
-        numbersToSort[index] = numbersToSort[index] - numbersToSort[minNumberIndex];
+        /// <summary>
+        /// Sorts the input numbers
+        /// </summary>
+        public List<int> Sort()
+        {
+            for (int index = 0; index < numbersToSort.Count; index++)
+            {
+                var minNumberIndex = index;
+                for (int innerIndex = index + 1; innerIndex < numbersToSort.Count; innerIndex++)
+                {
+                    if (numbersToSort[innerIndex] < numbersToSort[minNumberIndex])
+                        minNumberIndex = innerIndex;
+                }
+                Swap(numbersToSort, index, minNumberIndex);
+            }
+            return numbersToSort;
+        }
+
+        /// <summary>
+        /// Swaps the numbers in the array among the indices provided
+        /// </summary>
+        /// <param name="arrInput"></param>
+        /// <param name="index"></param>
+        /// <param name="minNumberIndex"></param>
+        static void Swap(List<int> numbersToSort, int index, int minNumberIndex)
+        {
+            if (index == minNumberIndex)
+                return;
+            numbersToSort[index] = numbersToSort[index] + numbersToSort[minNumberIndex];
+            numbersToSort[minNumberIndex] = numbersToSort[index] - numbersToSort[minNumberIndex];
+            numbersToSort[index] = numbersToSort[index] - numbersToSort[minNumberIndex];
+        }
     }
 }
