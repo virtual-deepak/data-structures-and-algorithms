@@ -11,7 +11,8 @@ namespace Sorting
         enum SortOption
         {
             SelectionSort = 1,
-            BubbleSort = 2
+            BubbleSort = 2,
+            InsertionSort = 3
         }
 
         /// <summary>
@@ -27,6 +28,7 @@ namespace Sorting
                 {
                     SortOption.SelectionSort => new SelectionSort(numbersToSort).Sort(),
                     SortOption.BubbleSort => new BubbleSort(numbersToSort).Sort(),
+                    SortOption.InsertionSort => new InsertionSort(numbersToSort).Sort(),
                     _ => throw new Exception($"Not a valid sort option: {sortOption}"),
                 };
                 Console.WriteLine($"Sorted output: {string.Join(" ", sortedOutput)}");
@@ -45,6 +47,7 @@ namespace Sorting
         {
             Console.WriteLine("1. Selection Sort");
             Console.WriteLine("2. Bubble Sort");
+            Console.WriteLine("3. Insertion Sort");
             Console.Write("Your choice (enter option number): ");
 
             string userInput = Console.ReadLine();
