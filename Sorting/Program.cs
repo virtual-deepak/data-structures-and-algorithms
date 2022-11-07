@@ -10,7 +10,8 @@ namespace Sorting
         /// </summary>
         enum SortOption
         {
-            SelectionSort = 1
+            SelectionSort = 1,
+            BubbleSort = 2
         }
 
         /// <summary>
@@ -22,15 +23,12 @@ namespace Sorting
             try
             {
                 (SortOption sortOption, List<int> numbersToSort) = GetValidUserInput();
-                List<int> sortedOutput = null;
-                switch (sortOption)
+                List<int> sortedOutput = sortOption switch
                 {
-                    case SortOption.SelectionSort:
-                        sortedOutput = new SelectionSort(numbersToSort).Sort();
-                        break;
-                    default:
-                        throw new Exception($"Not a valid sort option: {sortOption}");
-                }
+                    SortOption.SelectionSort => new SelectionSort(numbersToSort).Sort(),
+                    SortOption.BubbleSort => new BubbleSort(numbersToSort).Sort(),
+                    _ => throw new Exception($"Not a valid sort option: {sortOption}"),
+                };
                 Console.WriteLine($"Sorted output: {string.Join(" ", sortedOutput)}");
             }
             catch (Exception ex)
@@ -46,6 +44,7 @@ namespace Sorting
         private static (SortOption, List<int>) GetValidUserInput()
         {
             Console.WriteLine("1. Selection Sort");
+            Console.WriteLine("2. Bubble Sort");
             Console.Write("Your choice (enter option number): ");
 
             string userInput = Console.ReadLine();

@@ -1,8 +1,6 @@
 namespace Sorting;
-/// <summary>
-/// The SelectionSort class
-/// </summary>
-public class SelectionSort
+
+public class BubbleSort
 {
     /// <summary>
     /// The list of integers to sort
@@ -10,10 +8,10 @@ public class SelectionSort
     private List<int> numbersToSort;
 
     /// <summary>
-    /// Constructor for SelectionSort
+    /// Constructor for BubbleSort
     /// </summary>
     /// <param name="numbersToSort"></param>
-    public SelectionSort(List<int> numbersToSort)
+    public BubbleSort(List<int> numbersToSort)
     {
         this.numbersToSort = numbersToSort;
     }
@@ -25,13 +23,11 @@ public class SelectionSort
     {
         for (int i = 0; i < numbersToSort.Count; i++)
         {
-            var minNumberIndex = i;
             for (int j = i + 1; j < numbersToSort.Count; j++)
             {
-                if (numbersToSort[j] < numbersToSort[minNumberIndex])
-                    minNumberIndex = j;
+                if (numbersToSort[i] > numbersToSort[j])
+                    Swap(numbersToSort, i, j);
             }
-            Swap(numbersToSort, i, minNumberIndex);
         }
         return numbersToSort;
     }
@@ -41,13 +37,13 @@ public class SelectionSort
     /// </summary>
     /// <param name="arrInput"></param>
     /// <param name="i"></param>
-    /// <param name="minNumberIndex"></param>
-    static void Swap(List<int> numbersToSort, int i, int minNumberIndex)
+    /// <param name="j"></param>
+    static void Swap(List<int> numbersToSort, int i, int j)
     {
-        if (i == minNumberIndex)
+        if (i == j)
             return;
-        numbersToSort[i] = numbersToSort[i] + numbersToSort[minNumberIndex];
-        numbersToSort[minNumberIndex] = numbersToSort[i] - numbersToSort[minNumberIndex];
-        numbersToSort[i] = numbersToSort[i] - numbersToSort[minNumberIndex];
+        numbersToSort[i] = numbersToSort[i] + numbersToSort[j];
+        numbersToSort[j] = numbersToSort[i] - numbersToSort[j];
+        numbersToSort[i] = numbersToSort[i] - numbersToSort[j];
     }
 }
