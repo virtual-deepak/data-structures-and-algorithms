@@ -11,7 +11,7 @@ public class Program
             typeof(Program).Assembly, // all benchmarks from given assembly are going to be executed
             ManualConfig
                 .Create(DefaultConfig.Instance)
-                .With(ConfigOptions.JoinSummary)
-                .With(ConfigOptions.DisableLogFile));
+                .WithOptions(ConfigOptions.JoinSummary)
+                .WithOptions(ConfigOptions.DisableLogFile));
     }
 }

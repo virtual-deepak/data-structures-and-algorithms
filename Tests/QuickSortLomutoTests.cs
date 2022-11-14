@@ -9,7 +9,7 @@ public class QuickSortLomutoTests
     /// Test sorting on already sorted list 
     /// </summary>
     [TestMethod]
-    public void QuickSortLomutoOnAlreadySortedList()
+    public void QuickSortLomutoTestsOnAlreadySortedList()
     {
         var quickSortLomuto = new QuickSortLomuto(new List<int>() { 2, 3, 5, 6, 8, 10 });
         var sortedOutput = quickSortLomuto.Sort();
@@ -21,7 +21,7 @@ public class QuickSortLomutoTests
     /// Test sorting on reverse sorted list 
     /// </summary>
     [TestMethod]
-    public void QuickSortLomutoOnReverseSortedList()
+    public void QuickSortLomutoTestsOnReverseSortedList()
     {
         var quickSortLomuto = new QuickSortLomuto(new List<int>() { 10, 8, 6, 5, 3, 2 });
         var sortedOutput = quickSortLomuto.Sort();
@@ -32,7 +32,7 @@ public class QuickSortLomutoTests
     /// Test sorting on a randmon list 
     /// </summary>
     [TestMethod]
-    public void QuickSortLomutoOnRandomList()
+    public void QuickSortLomutoTestsOnRandomList()
     {
         var quickSortLomuto = new QuickSortLomuto(new List<int> { 6, 5, 3, 8, 2, 10 });
         var sortedOutput = quickSortLomuto.Sort();

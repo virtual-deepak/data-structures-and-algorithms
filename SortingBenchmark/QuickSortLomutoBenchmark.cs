@@ -4,6 +4,7 @@ using Sorting;
 namespace SortingBenchmark;
 
 [MemoryDiagnoser]
+[MarkdownExporter]
 public class QuickSortLomutoBenchmark
 {
     [Benchmark]

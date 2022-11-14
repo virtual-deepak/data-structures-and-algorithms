@@ -1,6 +1,6 @@
 namespace Sorting;
 
-public class QuickSortLomuto
+public class QuickSortHoare
 {
     /// <summary>
     /// The list of integers to sort
@@ -8,10 +8,10 @@ public class QuickSortLomuto
     private List<int> numbersToSort;
 
     /// <summary>
-    /// Constructor for Quick sort using Lomuto's partitioning technique
+    /// Constructor for Quick sort using Hoare's partitioning technique
     /// </summary>
     /// <param name="numbersToSort"></param>
-    public QuickSortLomuto(List<int> numbersToSort)
+    public QuickSortHoare(List<int> numbersToSort)
     {
         this.numbersToSort = numbersToSort;
     }
@@ -35,36 +35,41 @@ public class QuickSortLomuto
         // Swap pivot with index 0 number
         Swap(numbersToSort, startIndex, random.Next(startIndex, endIndex));
 
-        // Apply Lomuto's in-place partition technique
-        var smallerRangeEndIndex = LomutoPartition(numbersToSort, startIndex, endIndex);
+        // Apply Hoare's in-place partition technique
+        var smallerRangeEndIndex = HoarePartition(numbersToSort, startIndex, endIndex);
 
         PerformQuickSort(numbersToSort, startIndex, smallerRangeEndIndex - 1);
         PerformQuickSort(numbersToSort, smallerRangeEndIndex + 1, endIndex);
         return numbersToSort;
     }
 
-    static int LomutoPartition(List<int> numbersToSort, int startIndex, int endIndex)
+    static int HoarePartition(List<int> numbersToSort, int startIndex, int endIndex)
     {
         // Pivot is assumed to be the start index of the array
         var pivotIndex = startIndex;
         var pivotNumber = numbersToSort[pivotIndex];
 
-        var i = startIndex;
-        for (var j = i + 1; j <= endIndex; j++)
+        var smallerRangeIndex = startIndex + 1;
+        var biggerRangeIndex = endIndex;
+
+        while (smallerRangeIndex <= biggerRangeIndex)
         {
-            // Number less than the pivot on the left side of pivot
-            // i -> index for smaller numbers
-            // j -> index for larger numbers
-            if (numbersToSort[j] < pivotNumber)
+            if (numbersToSort[smallerRangeIndex] < pivotNumber)
+                smallerRangeIndex++;
+            else if (numbersToSort[biggerRangeIndex] > pivotNumber)
+                biggerRangeIndex--;
+            else
             {
-                i++;
-                Swap(numbersToSort, i, j);
+                Swap(numbersToSort, smallerRangeIndex, biggerRangeIndex);
+                smallerRangeIndex++;
+                biggerRangeIndex--;
             }
         }
-        Swap(numbersToSort, pivotIndex, i);
 
-        // Here the 'i' is pointing to pivot number
-        return i;
+        Swap(numbersToSort, pivotIndex, biggerRangeIndex);
+
+        // Here the biggerRangeIndex is pointing to pivot number
+        return biggerRangeIndex;
     }
 
     /// <summary>

@@ -14,7 +14,8 @@ namespace Sorting
             BubbleSort = 2,
             InsertionSort = 3,
             MergeSort = 4,
-            QuickSortLomuto = 5
+            QuickSortLomuto = 5,
+            QuickSortHoare = 6
         }
 
         /// <summary>
@@ -33,6 +34,7 @@ namespace Sorting
                     SortOption.InsertionSort => new InsertionSort(numbersToSort).Sort(),
                     SortOption.MergeSort => new MergeSort(numbersToSort).Sort(),
                     SortOption.QuickSortLomuto => new QuickSortLomuto(numbersToSort).Sort(),
+                    SortOption.QuickSortHoare => new QuickSortHoare(numbersToSort).Sort(),
                     _ => throw new Exception($"Not a valid sort option: {sortOption}"),
                 };
                 Console.WriteLine($"Sorted output: {string.Join(" ", sortedOutput)}");
@@ -54,6 +56,7 @@ namespace Sorting
             Console.WriteLine("3. Insertion Sort");
             Console.WriteLine("4. Merge Sort");
             Console.WriteLine("5. Quick Sort (Lomuto)");
+            Console.WriteLine("6. Quick Sort (Hoare)");
             Console.Write("Your choice (enter option number): ");
 
             string userInput = Console.ReadLine();
