@@ -21,13 +21,21 @@ public class BubbleSort
     /// </summary>
     public List<int> Sort()
     {
+        // is_swapped for optimization of bubble sort for achieving best case
+        // of O(n)
         for (int i = 0; i < numbersToSort.Count; i++)
         {
-            for (int j = i + 1; j < numbersToSort.Count; j++)
+            bool is_swapped = false;
+            for (int j = 0; j < numbersToSort.Count - i - 1; j++)
             {
-                if (numbersToSort[i] > numbersToSort[j])
-                    Swap(numbersToSort, i, j);
+                if (numbersToSort[j] > numbersToSort[j + 1])
+                {
+                    Swap(numbersToSort, j, j + 1);
+                    is_swapped = true;
+                }
             }
+            if (!is_swapped)
+                break;
         }
         return numbersToSort;
     }
