@@ -31,6 +31,7 @@ public class SelectionSort
                 if (numbersToSort[j] < numbersToSort[minNumberIndex])
                     minNumberIndex = j;
             }
+            // Select the smallest number and move it ahead of the array
             Swap(numbersToSort, i, minNumberIndex);
         }
         return numbersToSort;

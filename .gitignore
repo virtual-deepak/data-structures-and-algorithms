@@ -1,5 +1,5 @@
 bin
 obj
 .fake
-Tests/TestResults
-SortingBenchmark/BenchmarkDotNet.Artifacts
+Sorting/Tests/TestResults
+.vs

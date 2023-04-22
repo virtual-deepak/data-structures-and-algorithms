@@ -28,6 +28,7 @@ public class BubbleSort
             bool is_swapped = false;
             for (int j = 0; j < numbersToSort.Count - i - 1; j++)
             {
+                // Bubble-up the largest number at the end and lock
                 if (numbersToSort[j] > numbersToSort[j + 1])
                 {
                     Swap(numbersToSort, j, j + 1);
