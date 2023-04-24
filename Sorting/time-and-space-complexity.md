@@ -1,7 +1,7 @@
 # Time and Space complexity
 The time and space complexity for all sorting algorithms (with comparison) is very well explained here (one of the best resource I found so far)<br> https://www.interviewkickstart.com/learn/time-complexities-of-all-sorting-algorithms
 
-Some of my important notes - 
+Some of the notes - 
 
 ## Merge sort time complexity derivation
 ![](images/merge-sort-complexity.png)

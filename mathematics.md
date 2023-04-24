@@ -12,7 +12,7 @@ S = (n-1) + (n-2) + (n-2) + ..... + 0
 ## Arithmetico-Geometric Series
 As per [Wikipedia definition](https://en.wikipedia.org/wiki/Arithmetico-geometric_sequence), *arithmetico-geometric sequence is the result of term-by-term multiplication of a geometric progression with the corresponding terms of an arithmetic progression.*
 
-For example, below is one of the demonstration of arithemtico-geometric series and solution.
+For example, below is one of the demonstration of arithmetico-geometric series and solution.
 ![](Sorting/images/arithmetico-geometric.PNG)
 
 
