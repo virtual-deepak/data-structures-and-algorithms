@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingTests", "Sorting\Tes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingBenchmark", "Sorting\Benchmark\SortingBenchmark.csproj", "{EE6C8F45-C78C-48A4-984B-0209DD866511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingProblems", "CodingProblems\CodingProblems.csproj", "{DEF4C3A3-E5E1-4C20-B918-42DE6D02E867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingProblemTests", "CodingProblemTests\CodingProblemTests.csproj", "{DE7B7F1A-0960-454D-98A2-1FFF4ED0787F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{EE6C8F45-C78C-48A4-984B-0209DD866511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE6C8F45-C78C-48A4-984B-0209DD866511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE6C8F45-C78C-48A4-984B-0209DD866511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF4C3A3-E5E1-4C20-B918-42DE6D02E867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF4C3A3-E5E1-4C20-B918-42DE6D02E867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF4C3A3-E5E1-4C20-B918-42DE6D02E867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF4C3A3-E5E1-4C20-B918-42DE6D02E867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7B7F1A-0960-454D-98A2-1FFF4ED0787F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7B7F1A-0960-454D-98A2-1FFF4ED0787F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7B7F1A-0960-454D-98A2-1FFF4ED0787F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7B7F1A-0960-454D-98A2-1FFF4ED0787F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
