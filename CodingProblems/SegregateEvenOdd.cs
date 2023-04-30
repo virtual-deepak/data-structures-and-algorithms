@@ -1,5 +1,5 @@
 ﻿namespace CodingProblems;
-internal class SegregateEvenOdd
+public class SegregateEvenOdd
 {
     public static List<int> Execute(List<int> numbers)
     {

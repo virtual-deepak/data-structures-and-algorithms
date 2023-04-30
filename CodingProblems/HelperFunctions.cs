@@ -8,7 +8,7 @@ public class HelperFunctions
         List<int> inputNumbers = new();
         while (true)
         {
-            var inputKey = Console.Read();
+            var inputKey = (char)Console.Read();
             if (inputKey == '\n')
                 break;
             bool isValid = Int32.TryParse(inputKey.ToString(), out var inputNumber);
