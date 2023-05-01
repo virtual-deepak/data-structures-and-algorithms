@@ -8,5 +8,9 @@ using CodingProblems;
 // var output = MergeTwoSortedArrays.Execute(first, second);
 // HelperFunctions.PrintOutput(output);
 
-var output = DutchNationalFlag.Execute(HelperFunctions.GetUserInputCharacters());
+// var output = DutchNationalFlag.Execute(HelperFunctions.GetUserInputCharacters());
+// HelperFunctions.PrintOutput(output);
+
+var inputData = HelperFunctions.GetInputTwoSumInSortedArray();
+var output = TwoSumInSortedArrays.Execute(inputData.inputArray, inputData.target);
 HelperFunctions.PrintOutput(output);

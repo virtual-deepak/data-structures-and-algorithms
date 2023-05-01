@@ -5,17 +5,8 @@ public class HelperFunctions
     public static List<int> GetUserInputNumbers()
     {
         Console.WriteLine("Enter the numbers separated by space: ");
-        List<int> inputNumbers = new();
-        while (true)
-        {
-            var inputKey = (char)Console.Read();
-            if (inputKey == '\n')
-                break;
-            bool isValid = Int32.TryParse(inputKey.ToString(), out var inputNumber);
-            if (isValid)
-                inputNumbers.Add(inputNumber);
-        }
-        return inputNumbers;
+        var inputStringNumbers = Console.ReadLine().Split(" ").ToList();
+        return inputStringNumbers.Select(x => int.Parse(x)).ToList();
     }
 
     public static void PrintOutput(List<int> numbers)
@@ -40,5 +31,13 @@ public class HelperFunctions
     public static void PrintOutput(List<char> chars)
     {
         Console.WriteLine("Output: " + string.Join(",", chars));
+    }
+
+    public static (List<int> inputArray, int target) GetInputTwoSumInSortedArray()
+    {
+        var inputArray = HelperFunctions.GetUserInputNumbers();
+        Console.Write("Enter Target value: ");
+        int target = Int32.Parse(Console.ReadLine());
+        return (inputArray, target);
     }
 }

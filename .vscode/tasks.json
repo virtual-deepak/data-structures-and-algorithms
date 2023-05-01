@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Sorting/Sorting.csproj",
+                "${workspaceFolder}/CodingProblems/CodingProblems.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Sorting/Sorting.csproj",
+                "${workspaceFolder}/CodingProblems/CodingProblems.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Sorting/Sorting.csproj"
+                "${workspaceFolder}/CodingProblems/CodingProblems.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
