@@ -40,4 +40,16 @@ public class HelperFunctions
         int target = Int32.Parse(Console.ReadLine());
         return (inputArray, target);
     }
+
+    public static List<LinkedListNode> GetInputArrayOfLinkedLists()
+    {
+        //TODO: Get an input array of numbers, form a linked list for each and return
+        return null;
+    }
+
+    public static List<List<int>> GetInputArrayOfIntervalsEaschSizeTwo()
+    {
+        //TODO: Get a List<List<int>> intervals and return
+        return null;
+    }
 }
