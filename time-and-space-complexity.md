@@ -37,7 +37,7 @@ Hence, the total work done = cn * h = cn * log<sub>2</sub>n
       4. Generalizing above, total work done or time complexity is<br>
    T(n) = (2<sup>h</sup>*0) + (2<sup>h-1</sup>*1) +  (2<sup>h-2</sup>*2) + .. (2<sup>h-i</sup>*i) + .... + (1 * 2<sup>h</sup>)<br>
    Solving, this we get below time complexity for building the heap.<br>
-   *Note - Refer [arithmetico-geometric series solution](../mathematics.md#arithmetico-geometric-series) which is used in below*<br>
+   *Note - Refer [arithmetico-geometric series solution](mathematics.md#arithmetico-geometric-series) which is used in below*<br>
     ![](images/build-heap.PNG)
    2. Time complexity of *extract-max* operation on the max-heap is O(1) since it just get the root element. Hence, for getting for all nodes it will be O(n).
 

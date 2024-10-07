@@ -4,3 +4,4 @@ obj
 Sorting/Tests/TestResults
 .vs
 TestResults
+.venv
